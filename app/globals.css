@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family:var(--font-jetbrains-mono),Arial, Helvetica, sans-serif;
+}
+/* global.css */
+.defaultbutton {
+  background-color: #963EC8; /* Purple color */
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%; /* Full width by default on small screens */
+ /* Limit maximum width on larger screens */
+}
+
+.defaultbutton:hover {
+  background-color: #8a00d4; /* Slightly darker shade for hover effect */
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .defaultbutton {
+    padding: 12px 25px;
+    font-size: 18px;
+    width: auto; /* Reset to auto width on medium and larger screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .defaultbutton {
+    padding: 8px 20px;
+    font-size: 20px;
+  }
+}
