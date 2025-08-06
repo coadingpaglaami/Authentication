@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import  LayoutWrapper  from "./LayoutWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -8,8 +9,8 @@ const geistSans = Geist({
 
 const jetbrains = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
-  subsets: ["latin"]
-})
+  subsets: ["latin"],
+});
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
@@ -26,7 +27,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${jetbrains.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <LayoutWrapper>{children}</LayoutWrapper>
       </body>
     </html>
   );
