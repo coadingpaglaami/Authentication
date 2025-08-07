@@ -1,10 +1,11 @@
 import { AuthImg } from "@/utils/image";
 import Image from "next/image";
 
+
 export default function AuthLayOut({ children }) {
 
     return (
-        <div className="grid">
+        <div className={`grid `}>
             <Image
                 src={AuthImg}
                 alt="loading"
