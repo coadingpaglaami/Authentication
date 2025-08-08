@@ -1,7 +1,10 @@
-import { AdminDashboard } from "@/components/adashboard";
+import { AdminDashboard, SalesAnalytics } from "@/components/adashboard";
 
-export default function AdminDashboardPage(){
-    return(
-        <AdminDashboard/>
-    )
+export default function AdminDashboardPage() {
+  return (
+    <>
+      <AdminDashboard />
+      <SalesAnalytics />
+    </>
+  );
 }
