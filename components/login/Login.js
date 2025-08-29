@@ -23,7 +23,7 @@ export const Login = () => {
       const res = await login({
         email: formData.email,
         password: formData.password,
-      });
+      }).unwrap();
       console.log("Login response:", res); // for debugging
 
       if (res?.data?.token?.access && res?.data?.token?.refresh) {
